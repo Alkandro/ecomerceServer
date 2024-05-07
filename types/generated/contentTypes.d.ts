@@ -912,6 +912,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     singularName: 'product';
     pluralName: 'products';
     displayName: 'Product';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -923,7 +924,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     main_image: Attribute.Media & Attribute.Required;
     images: Attribute.Media & Attribute.Required;
     tags: Attribute.String;
-    caracteriistics: Attribute.Blocks;
+    characteristics: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
