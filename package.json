@@ -10,10 +10,18 @@
     "strapi": "strapi"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@strapi/plugin-cloud": "5.11.3",
     "@strapi/plugin-users-permissions": "5.11.3",
     "@strapi/provider-upload-cloudinary": "5.11.3",
     "@strapi/strapi": "5.11.3",
+=======
+    "@strapi/plugin-cloud": "4.21.0",
+    "@strapi/plugin-i18n": "4.21.0",
+    "@strapi/plugin-users-permissions": "4.21.0",
+    "@strapi/provider-upload-cloudinary": "^4.24.0",
+    "@strapi/strapi": "4.21.0",
+>>>>>>> 21cccf27e63b77da5641b09523a06cadc914ed0a
     "better-sqlite3": "8.6.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

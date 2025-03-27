@@ -931,11 +931,18 @@ export interface PluginUsersPermissionsRole
   extends Struct.CollectionTypeSchema {
   collectionName: 'up_roles';
   info: {
+<<<<<<< HEAD
     description: '';
     displayName: 'Role';
     name: 'role';
     pluralName: 'roles';
     singularName: 'role';
+=======
+    singularName: 'product';
+    pluralName: 'products';
+    displayName: 'Product';
+    description: '';
+>>>>>>> 21cccf27e63b77da5641b09523a06cadc914ed0a
   };
   options: {
     draftAndPublish: false;
@@ -949,6 +956,7 @@ export interface PluginUsersPermissionsRole
     };
   };
   attributes: {
+<<<<<<< HEAD
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -957,6 +965,28 @@ export interface PluginUsersPermissionsRole
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::users-permissions.role'
+=======
+    title: Attribute.String & Attribute.Required;
+    price: Attribute.Decimal & Attribute.Required;
+    discount: Attribute.Integer;
+    main_image: Attribute.Media & Attribute.Required;
+    images: Attribute.Media & Attribute.Required;
+    tags: Attribute.String;
+    characteristics: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+>>>>>>> 21cccf27e63b77da5641b09523a06cadc914ed0a
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String &
